@@ -5,6 +5,7 @@
         <head>
         <th>Nombre</th>
         <th>Apellido</th>
+        <th>Ciudad</th>
         <th>Acciones</th>
     </head>
     <tbody>
@@ -13,6 +14,7 @@
         <tr>
             <td><?php echo $data->nombre; ?></td>
             <td><?php echo $data->apepat; ?></td>
+            <td><?php echo $data->nomciudad; ?></td>
             <td><a href="<?php echo 'Usuario/delete/'.$data->usuario_id;?>">Eliminar</a></td>
             <td><a href="<?php echo 'Usuario/detail/'.$data->usuario_id;?>">Ver Detalle</a></td>
         </tr>

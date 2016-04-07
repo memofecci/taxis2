@@ -7,14 +7,14 @@ class usuario_model extends CI_model{
     }
     //mostrar usuarios
     public function list_all(){
-        $query=$this->db->query("select * from usuarios");
+        $query=$this->db->query("select usuarios.usuario_id, usuarios.nombre, usuarios.apepat, ciudades.nombre as nomciudad from usuarios,ciudades where usuarios.ciudad_id=ciudades.ciudad_id");
         $result=$query->result_object();
         $this->db->close();
         return $result;
     }
     //guardar usuairos
-    public function save($nombre,$apepat){
-        $this->db->query("insert into usuarios(nombre,apepat) values ('".$nombre."','".$apepat."')");
+    public function save($nombre,$apepat,$ciudad_id){
+        $this->db->query("insert into usuarios(nombre,apepat,ciudad_id) values ('".$nombre."','".$apepat."','".$ciudad_id."')");
         $this->db->close();
         
     }
