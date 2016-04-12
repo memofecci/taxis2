@@ -1,5 +1,5 @@
 <h1>Listado de Usuarios</h1><br>
-<a href="Usuario/nuevo">Nuevo Usuario</a><br>
+<a href=<?php echo (base_url(). 'index.php/usuario/nuevo') ?>>nuevo Usuario</a><br>
 <table border="1">
     
         <head>

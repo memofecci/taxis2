@@ -26,5 +26,10 @@ class Ciudad_model extends CI_Model{
         $this->db->close();
         return $result;
     }
+    public function edit($ciudad_id,$nombre){
+        $this->db->query("update ciudades set nombre='".$nombre."' where ciudad_id='".$ciudad_id."'");
+        $this->db->close();
+    }
+ 
 }
 
