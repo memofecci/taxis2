@@ -13,9 +13,9 @@
         <tr>
             <td><?php echo $data->ciudad_id; ?></td>
             <td><?php echo $data->nombre; ?></td>
-            <td><a href="<?php echo 'Ciudad/delete/'.$data->ciudad_id;?>">Eliminar</a></td>
-            <td><a href="<?php echo 'Ciudad/detail/'.$data->ciudad_id;?>">Ver Detalle</a></td>
-            <td><a href="<?php echo 'Ciudad/edit/'.$data->ciudad_id;?>">Modificar</a></td>
+            <td><a href="<?php echo (base_url(). 'index.php/Ciudad/delete/'.$data->ciudad_id);?>">Eliminar</a></td>
+            <td><a href="<?php echo (base_url(). 'index.php/Ciudad/detail/'.$data->ciudad_id);?>">Ver Detalle</a></td>
+            <td><a href="<?php echo (base_url(). 'index.php/Ciudad/edit/'.$data->ciudad_id);?>">Modificar</a></td>
         <?php } ?> 
     </tbody>
      
