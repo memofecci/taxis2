@@ -32,5 +32,10 @@ class Usuario extends CI_Controller{
     $this->load->view('Usuario_detail',$data);
         
     }
+    public function edit($usuario_id){
+        $data['ciudad']=$this->Ciudad_model->list_all();
+        $data['usuario']=$this->Usuario_model->find_by_id($usuario_id);
+        $this->load->view('usuario_edit',$data);
+    }
     
 }

@@ -1,4 +1,6 @@
-<a href="index">Volver</a><br>
+<a href=<?php echo (base_url(). 'index.php/home')?>>Home</a><br>
+<a href=<?php echo (base_url(). 'index.php/Usuario')?>>Usuario Menu</a><br>
+<hr>
 
 <form method="post" action="save">
 

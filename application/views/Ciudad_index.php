@@ -1,5 +1,6 @@
-<h1>Listado de CIudad</h1><br>
-<a href="Ciudad/nuevo">Nueva Ciudad</a><br>
+<h1>Listado de Ciudad</h1><br>
+<a href=<?php echo (base_url(). 'index.php/ciudad/nuevo')?>>Nueva Ciudad</a><br>
+<a href=<?php echo (base_url(). 'index.php/home')?>>Home</a><br>
 <table border="1">
     
         <head>
@@ -13,9 +14,7 @@
         <tr>
             <td><?php echo $data->ciudad_id; ?></td>
             <td><?php echo $data->nombre; ?></td>
-            <td><a href="<?php echo (base_url(). 'index.php/Ciudad/delete/'.$data->ciudad_id);?>">Eliminar</a></td>
-            <td><a href="<?php echo (base_url(). 'index.php/Ciudad/detail/'.$data->ciudad_id);?>">Ver Detalle</a></td>
-            <td><a href="<?php echo (base_url(). 'index.php/Ciudad/edit/'.$data->ciudad_id);?>">Modificar</a></td>
+            <td><a href="<?php echo (base_url(). 'index.php/Ciudad/delete/'.$data->ciudad_id);?>">Eliminar</a>/<a href="<?php echo (base_url(). 'index.php/Ciudad/detail/'.$data->ciudad_id);?>">Ver Detalle</a>/<a href="<?php echo (base_url(). 'index.php/Ciudad/edit/'.$data->ciudad_id);?>">Modificar</a></td>
         <?php } ?> 
     </tbody>
      

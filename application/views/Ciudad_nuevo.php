@@ -1,4 +1,5 @@
-<a href="index">Volver</a><br>
+<a href=<?php echo (base_url(). 'index.php/home')?>>Home</a><br>
+<a href=<?php echo (base_url(). 'index.php/Ciudad')?>>Ciudad Menu</a><br>
 
 <form method="post" action="save">
 

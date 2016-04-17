@@ -1,3 +1,6 @@
+<a href=<?php echo (base_url(). 'index.php/home')?>>Home</a><br>
+<a href=<?php echo (base_url(). 'index.php/Ciudad')?>>Ciudad Menu</a><br>
+
 <form method="POST" action="../update">
     
     <?php foreach ($ciudad as $ciu) { ?>

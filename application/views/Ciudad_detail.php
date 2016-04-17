@@ -1,3 +1,6 @@
+<a href=<?php echo (base_url(). 'index.php/home')?>>Home</a><br>
+<a href=<?php echo (base_url(). 'index.php/Ciudad')?>>Ciudad Menu</a><br>
+
 <h1>Listado de Ciudades</h1><br>
 <a href="Ciudad/">volver</a><br>
 <table border="1">

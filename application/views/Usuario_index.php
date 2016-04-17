@@ -1,5 +1,6 @@
 <h1>Listado de Usuarios</h1><br>
 <a href=<?php echo (base_url(). 'index.php/usuario/nuevo') ?>>nuevo Usuario</a><br>
+<a href=<?php echo (base_url(). 'index.php/home')?>>Home</a><br>
 <table border="1">
     
         <head>
@@ -15,8 +16,7 @@
             <td><?php echo $data->nombre; ?></td>
             <td><?php echo $data->apepat; ?></td>
             <td><?php echo $data->nomciudad; ?></td>
-            <td><a href="<?php echo 'Usuario/delete/'.$data->usuario_id;?>">Eliminar</a></td>
-            <td><a href="<?php echo 'Usuario/detail/'.$data->usuario_id;?>">Ver Detalle</a></td>
+             <td><a href="<?php echo (base_url() . 'index.php/usuario/delete/' .$data->usuario_id ) ?>">Eliminar</a> /<a href="<?php echo (base_url() . 'index.php/usuario/detail/' .$data->usuario_id ) ?>">Ver Detalle</a> /<a href="<?php echo (base_url() . 'index.php/usuario/edit/' .$data->usuario_id ) ?>">Editar</a></td>
         </tr>
         <?php } ?> 
     </tbody>

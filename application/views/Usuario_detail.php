@@ -1,3 +1,6 @@
+<a href=<?php echo (base_url(). 'index.php/home')?>>Home</a><br>
+<a href=<?php echo (base_url(). 'index.php/Usuario')?>>Usuario Menu</a><br>
+
 <h1>Listado de Usuarios</h1><br>
 <a href="Usuario/">volver</a><br>
 <table border="1">
