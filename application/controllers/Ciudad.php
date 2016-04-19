@@ -5,6 +5,12 @@ class Ciudad extends CI_Controller{
         parent::__construct();
         $this->load->model('Ciudad_model');
         $this->load->helper('url');
+        $this->load->librery('session');
+        if($this->session->userdata('login')){
+            
+        }else{
+            redirect(base_url() . "index.php/logins");
+        }
     }
     public function index(){
         $data["ciudad"]=  $this->Ciudad_model->list_all();
