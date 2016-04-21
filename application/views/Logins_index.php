@@ -7,7 +7,7 @@
           <form method="post" action="<?php echo (base_url() . 'index.php/logins/log_in') ?>">
               <div class="form-group">
                   <label for="username">Username</label>
-                  <input type="email" name="username" class="form-control" id="username" placeholder="Ingrese su Usuario">
+                  <input type="text" name="username" class="form-control" id="username" placeholder="Ingrese su Usuario">
               </div>
               <div class="form-group">
                   <label for="password">Password</label>
