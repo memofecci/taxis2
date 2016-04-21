@@ -8,7 +8,9 @@ class Logins extends CI_Controller{
         $this->load->model('Logins_model');
     }
         public function index(){
+            $this->load->view("template/head_index");
            $this->load->view('Logins_index');
+           $this->load->view('template/footer_index');
         }
         public function log_in(){
             $username=$this->input->post('username');
