@@ -13,8 +13,8 @@ class usuario_model extends CI_model{
         return $result;
     }
     //guardar usuairos
-    public function save($nombre,$apepat,$ciudad_id){
-        $this->db->query("insert into usuarios(nombre,apepat,ciudad_id) values ('".$nombre."','".$apepat."','".$ciudad_id."')");
+    public function save($nombre,$apepat,$username, $password,$ciudad_id){
+        $this->db->query("insert into usuarios(nombre,apepat,username,password,ciudad_id) values ('".$nombre."','".$apepat."','".$username."','".$password."','".$ciudad_id."')");
         $this->db->close();
         
     }

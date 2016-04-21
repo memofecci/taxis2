@@ -1,7 +1,7 @@
 <h1>Bienvenido a Sistema V 0.0.0.1</h1>
 <br>
 
-<a href="<?php echo (base_url(). 'index.php/logins/log_out')?>">Cerrar Sesion</a>
+<a href="<?php echo (base_url() . 'index.php/logins/log_out') ?>">Cerrar Sesion</a>
 <br>
 
 

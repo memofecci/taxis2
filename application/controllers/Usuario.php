@@ -25,8 +25,10 @@ class Usuario extends CI_Controller{
     public function save(){
         $nombre=$this->input->post('nombre');
         $apepat=$this->input->post('apepat');
+        $username=  $this->input->post('username');
+        $password=  $this->input->post('password');
         $ciudad_id=  $this->input->post('ciudad_id');
-        $this->Usuario_model->save($nombre,$apepat,$ciudad_id);
+        $this->Usuario_model->save($nombre,$apepat,$username,$password,$ciudad_id);
         redirect('Usuario');
     }
     public function  delete ($usuario_id){
