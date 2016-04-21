@@ -6,11 +6,11 @@ class Usuario extends CI_Controller{
         $this->load->model ('Usuario_model');
         $this->load->model('Ciudad_model');
         $this->load->helper('url');   
-        $this->load->librery('session');
+        $this->load->library('session');
         if($this->session->userdata('login')){
             
         }else{
-            redirect(base_url() . "index.php/logins");
+            redirect(base_url()."index.php/logins");
         }
     }
     public function index(){

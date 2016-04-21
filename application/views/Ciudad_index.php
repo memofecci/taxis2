@@ -1,6 +1,7 @@
 <h1>Listado de Ciudad</h1><br>
 <a href=<?php echo (base_url(). 'index.php/ciudad/nuevo')?>>Nueva Ciudad</a><br>
 <a href=<?php echo (base_url(). 'index.php/home')?>>Home</a><br>
+<a href="<?php echo (base_url() . 'index.php/login/log_out') ?>">Cerrar Sesion</a><br>
 <table border="1">
     
         <head>

@@ -5,14 +5,13 @@ class Logins_model extends CI_Model{
         parent::__construct();
         $this->load->database();
     }
-    public function validar($username, $password){
-        $query=  $this->db->query("select * from Usuarios where username='".username."'");
+    public function validar($username,$password){
+        $query=$this->db->query("select * from usuarios where username='".$username."'");
         $result=$query->result_object();
         $this->db->close();
-        foreach ($result as $usuario){
-            if ($usuario->password==$password){
+        foreach($result as $usuario){
+            if($usuario->password==$password){
                 return true;
-                
             }else{
                 return false;
             }
