@@ -2,7 +2,7 @@
 <a href=<?php echo (base_url(). 'index.php/usuario/nuevo') ?>>nuevo Usuario</a><br>
 <a href=<?php echo (base_url(). 'index.php/home')?>>Home</a><br>
 <a href="<?php echo (base_url() . 'index.php/logins/log_out') ?>">Cerrar Sesion</a>
-<table border="1">
+<table class="table table-striped">
     
         <head>
         <th>Nombre</th>
@@ -23,4 +23,3 @@
     </tbody>
      
 </table>
-

@@ -13,8 +13,10 @@ class Ciudad extends CI_Controller{
         }
     }
     public function index(){
+        $this->load->view('template/head_index');
         $data["ciudad"]=  $this->Ciudad_model->list_all();
         $this->load->view('Ciudad_index',$data);
+        $this->load->view('template/footer_index');
     }
     public function nuevo(){
         $this->load->view('Ciudad_nuevo');

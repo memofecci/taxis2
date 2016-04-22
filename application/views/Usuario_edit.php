@@ -4,7 +4,7 @@
 
 <form method="post" action="../update">
 
-<table>
+<table class="table">
     <?php foreach($usuario as $row){ ?>
     <tr>
         <td>id</td><td><input type="text" name="usuario_id" value="<?php echo $row->usuario_id; ?>"></td>

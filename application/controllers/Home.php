@@ -13,7 +13,9 @@ class Home extends CI_Controller{
     
     }
     public function index(){
+        $this->load->view('template/head_index');
         $this->load->view('Home_index');
+        $this->load->view('template/footer_index');
     }
 }
 

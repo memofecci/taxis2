@@ -14,13 +14,17 @@ class Usuario extends CI_Controller{
         }
     }
     public function index(){
+        $this->load->view('template/head_index');
         $data["usuario"]=  $this->Usuario_model->list_all();
         $this->load->view('Usuario_index',$data);
+        $this->load->view('template/footer_index');
     }
     
     public function nuevo(){
+        $this->load->view('template/head_index');
         $data["ciudad"]=  $this->Ciudad_model->list_all();
         $this->load->view('Usuario_nuevo', $data);
+        $this->load->view('template/footer_index');
     }
     public function save(){
         $nombre=$this->input->post('nombre');
