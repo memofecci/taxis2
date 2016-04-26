@@ -40,22 +40,28 @@ class Usuario extends CI_Controller{
         redirect('Usuario');
     }
     public function detail($usuario_id){
+        $this->load->view('template/head_index');
     $data["Usuario"]=  $this->Usuario_model->find_by_id($usuario_id);
     $this->load->view('Usuario_detail',$data);
+    $this->load->view('template/footer_index');
         
     }
     public function edit($usuario_id){
+        $this->load->view('template/head_index');
         $data['ciudad']=$this->Ciudad_model->list_all();
         $data['usuario']=$this->Usuario_model->find_by_id($usuario_id);
         $this->load->view('usuario_edit',$data);
+        $this->load->view('template/footer_index');
     }
     public function update(){
+        $this->load->view('template/head_index');
         $usuario_id=  $this->input->post('usuario_id');
         $nombre=$this->input->post('nombre');
         $apepat=$this->input->post('apepat');
         $ciudad_id=  $this->input->post('ciudadlista');
         $this->Usuario_model->edit($usuario_id,$nombre,$apepat,$ciudad_id);
         redirect('Usuario');
+        $this->load->view('template/footer_index');
     }
     
 }

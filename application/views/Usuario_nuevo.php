@@ -1,6 +1,10 @@
-<a href=<?php echo (base_url(). 'index.php/home')?>>Home</a><br>
-<a href=<?php echo (base_url(). 'index.php/Usuario')?>>Usuario Menu</a><br>
-<a href="<?php echo (base_url() . 'index.php/logins/log_out') ?>">Cerrar Sesion</a>
+<div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+        <li><a href=<?php echo (base_url(). 'index.php/home')?>>Home</a></li>
+        <li><a href=<?php echo (base_url(). 'index.php/Usuario')?>>Usuario Menu</a></li>
+        <li><a href="<?php echo (base_url() . 'index.php/logins/log_out') ?>">Cerrar Sesion</a></li>
+    </ul>
+</div><!--/.nav-collapse -->
 <hr>
 
 <form method="post" action="save">

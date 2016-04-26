@@ -16,19 +16,35 @@ class Logins extends CI_Controller{
             $username=$this->input->post('username');
             $password=$this->input->post('password');
             $valido=$this->Logins_model->validar($username,$password);
-            if($valido){
-                $usuario_data=array(
-                    'login' => TRUE
-                );
+            if($valido !=false){
+                foreach ($valido as $login){
+                    $usuario_data= array(
+                        'id'=>$login->usuario_id,
+                            'nombre'=>$login->username,
+                        'login'=>TRUE
+                    );
+                    
+                }
                 $this->session->set_userdata($usuario_data);
                 redirect(base_url() .'index.php/home');
             }else{
                 redirect('logins');
             }
+           
         }
         public function log_out(){
             $this->session->sess_destroy();
             redirect(base_url() . 'index.php/logins');
         }
 }
+
+ //if($valido){
+               // $usuario_data=array(
+               //     'login' => TRUE
+                //);
+                //$this->session->set_userdata($usuario_data);
+                //redirect(base_url() .'index.php/home');
+            //}else{
+                //redirect('logins');
+            //}
 

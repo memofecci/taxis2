@@ -10,8 +10,8 @@ class Logins_model extends CI_Model{
         $result=$query->result_object();
         $this->db->close();
         foreach($result as $usuario){
-            if($usuario->password==$password){
-                return true;
+            if(password_verify($password, $usuario->password)){
+                return $result;
             }else{
                 return false;
             }
