@@ -16,7 +16,7 @@ class Home extends CI_Controller{
         $this->load->view('template/head_index');
         $data['username']=  $this->session->userdata('nombre');
         $data['idusuario']=  $this->session->userdata('id');
-        $this->load->view('Home_index');
+        $this->load->view('Home_index',$data);
         $this->load->view('template/footer_index');
     }
 }
