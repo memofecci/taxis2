@@ -22,7 +22,7 @@ class Logins extends CI_Controller {
         if ($valido != false) {
             foreach ($valido as $login) {
                 $usuario_data = array(
-                    'id' => $login->usuario_id,
+                    'id' => $login->operadora_id,
                     'nombre' => $login->username,
                     
                     'login' => TRUE

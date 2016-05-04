@@ -10,6 +10,7 @@
 
         <li><a href="<?php echo (base_url() . 'index.php/usuario') ?>">Usuario</a></li>
         <li><a href="<?php echo (base_url() . 'index.php/ciudad') ?>">Ciudad</a></li>
+        <li><a href="<?php echo (base_url() . 'index.php/choferes') ?>">Choferes</a></li>
         <li><a href="<?php echo (base_url() . 'index.php/logins/log_out') ?>">Cerrar Seccion</a></li>
     </ul>
 </div><!--/.nav-collapse -->

@@ -6,7 +6,7 @@ class Logins_model extends CI_Model{
         $this->load->database();
     }
     public function validar($username,$password){
-        $query=$this->db->query("select * from usuarios where username='".$username."'");
+        $query=$this->db->query("select * from operadoras where username='".$username."'");
         $result=$query->result_object();
         $this->db->close();
         foreach($result as $usuario){
