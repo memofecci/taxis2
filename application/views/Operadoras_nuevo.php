@@ -1,6 +1,6 @@
 <div id="navbar" class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
-        <li><a href=<?php echo (base_url(). 'index.php/choferes')?>>Menu Choferes</a></li>
+        <li><a href=<?php echo (base_url(). 'index.php/Operadoras')?>>Menu Operadoras</a></li>
     </ul>
 </div><!--/.nav-collapse -->
 <hr>
@@ -30,6 +30,14 @@
     <div class="form-group">
             <label for="celular">Celular</label>
             <input type="text" class="form-control" name="celular" id="celular" placeholder="Ingrese Celular">
+        </div>
+    <div class="form-group">
+            <label for="username">Usuario</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Ingrese Usuario">
+        </div>
+    <div class="form-group">
+            <label for="password">Clave</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Ingrese Clave">
         </div>
         <button type="submit" class="btn btn-default">Guardar</button>
     </form>

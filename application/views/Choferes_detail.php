@@ -1,32 +1,36 @@
-<h1>Listado de Choferes</h1><br>
+
+<h1>detalle Chofer</h1><br>
 
 <div id="navbar" class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
-
-        <li><a href=<?php echo (base_url(). 'index.php/choferes/nuevo')?>>Nuevo Chofer</a></li>
+        <li><a href=<?php echo (base_url(). 'index.php/choferes')?>>Menu Choferes</a></li>
     </ul>
-</div>
+</div><!--/.nav-collapse -->
 
 <table class="table table-striped">
     
         <head>
-        <th>id</th>
+        <th>Id</th>
         <th>Rut</th>
         <th>Nombre</th>
         <th>Apepat</th>
         <th>Apemat</th>
-        <th>Opciones</th>
+        <th>Dirreccion</th>
+        <th>Celular</th>
+        <th>Estado</th>
     </head>
     <tbody>
-        <?php foreach ($choferes as $data){?>
+        <?php foreach ($Choferes as $data){?>
                 
-        <tr>     
+        <tr>            
             <td><?php echo $data->chofer_id; ?></td>
             <td><?php echo $data->rut; ?></td>
             <td><?php echo $data->nombre; ?></td>
             <td><?php echo $data->apepat; ?></td>
             <td><?php echo $data->apemat; ?></td>
-            <td><a href="<?php echo (base_url(). 'index.php/Choferes/detail/'.$data->chofer_id);?>">Ver Detalle</a>/<a href="<?php echo (base_url(). 'index.php/Choferes/edit/'.$data->chofer_id);?>">Modificar</a></td>
+            <td><?php echo $data->direccion; ?></td>
+            <td><?php echo $data->celular; ?></td>
+            <td><?php echo $data->estado; ?></td>
         <?php } ?> 
     </tbody>
      
