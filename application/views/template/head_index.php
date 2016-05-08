@@ -49,7 +49,7 @@
           <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/Clientes') ?>">Clientes</a>
           <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/Operadoras') ?>">Operadoras</a>
           <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/Carreras') ?>">Carreras</a>
-          <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/logins/log_out') ?>">Cerrar Seccion</a>
+          <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/logins/log_out') ?>">Cerrar Sesion</a>
         </div>
         <!--<div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">

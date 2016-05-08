@@ -36,9 +36,13 @@
             <label for="celular">Celular</label>
             <input type="text" class="form-control" name="celular" id="celular" value=<?php echo $data->celular; ?>>
         </div>
-    <div class="form-group">
-            <label for="estado">Estado</label>
-            <input type="text" class="form-control" name="estado" id="estado" value=<?php echo $data->estado; ?>>
+    <div>
+            Estado<select class="form-control input-lg" name="estado">
+                
+                    <option value=1>Activo</option>
+                    <option value=0>Inactivo</option>
+
+            </select>
         </div>
         <button type="submit" class="btn btn-default">Guardar</button>
         <?php } ?>

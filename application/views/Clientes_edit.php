@@ -24,12 +24,15 @@
             <label for="telefono">Telefono</label>
             <input type="text" class="form-control" name="telefono" id="telefono" value=<?php echo $data->telefono; ?>>
         </div>
-    <div class="form-group">
-            <label for="estado">Estado</label>
-            <input type="text" class="form-control" name="estado" id="estado" value=<?php echo $data->estado; ?>>
+    <div>
+            Estado<select class="form-control input-lg" name="estado">
+                
+                    <option value=1>Activo</option>
+                    <option value=0>Inactivo</option>
+
+            </select>
         </div>
         <button type="submit" class="btn btn-default">Guardar</button>
         <?php } ?>
-        <h4>Estado 1= activo 0=inactivo</h4>
     </form>
 
