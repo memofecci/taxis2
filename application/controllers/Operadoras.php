@@ -65,6 +65,17 @@ class Operadoras extends CI_Controller{
         $this->Operadoras_model->edit($operadora_id, $rut, $nombre, $apepat, $apemat, $direccion, $celular,$username, $password, $estado);
         redirect('Operadoras');
     }
+    public function buscar() {
+        $this->load->view('template/head_index');
+        if ($_POST) {
+            $buscar = $this->input->post('buscar');
+        } else {
+            $buscar = '';
+        }
+        $data["Operadoras"] = $this->Operadoras_model->buscar_operadoras($buscar);
+        $this->load->view('Operadoras_buscar', $data);
+        $this->load->view('template/footer_index');
+    }
     
     
 }

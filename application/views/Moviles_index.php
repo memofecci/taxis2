@@ -4,6 +4,7 @@
     <ul class="nav navbar-nav">
 
         <li><a href=<?php echo (base_url(). 'index.php/Moviles/nuevo')?>>Nuevo Movil</a></li>
+        <li><a href=<?php echo (base_url(). 'index.php/Moviles/buscar')?>>Buscar</a></li>
     </ul>
 </div>
 

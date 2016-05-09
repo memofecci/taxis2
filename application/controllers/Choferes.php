@@ -16,7 +16,7 @@ class Choferes extends CI_Controller {
 
     public function index() {
         $this->load->view('template/head_index');
-        $data["choferes"] = $this->Choferes_model->list_all();
+        $data["Choferes"] = $this->Choferes_model->list_all();
         $this->load->view('Choferes_index', $data);
         $this->load->view('template/footer_index');
     }
@@ -64,6 +64,17 @@ class Choferes extends CI_Controller {
         $estado=  $this->input->post('estado');
         $this->Choferes_model->edit($chofer_id, $rut, $nombre, $apepat, $apemat, $direccion, $celular, $estado);
         redirect('Choferes');
+    }
+    public function buscar() {
+        $this->load->view('template/head_index');
+        if($_POST){
+            $buscar=  $this->input->post('buscar');            
+        }else{
+            $buscar='';           
+        }     
+        $data["choferes"] = $this->Choferes_model->buscar_choferes($buscar);
+            $this->load->view('Choferes_buscar', $data);
+        $this->load->view('template/footer_index');
     }
 
 }

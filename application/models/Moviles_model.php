@@ -25,5 +25,14 @@ class Moviles_model extends CI_Model{
         $this->db->query("update moviles set numero='".$numero."',patente='".$patente."',chofer_id='".$chofer_id."', estado='".$estado."' where movil_id='".$movil_id."'");
         $this->db->close();
     }
+    public function buscar_moviles($buscar){
+        $this->db->like('movil_id',$buscar);
+        $this->db->or_like('numero',$buscar);
+        $this->db->or_like('patente',$buscar);
+        $this->db->or_like('chofer_id',$buscar);
+        $query=  $this->db->get('moviles');
+        $this->db->close();
+        return $query->result();
+    }
 }
 

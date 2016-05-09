@@ -25,5 +25,19 @@ class Operadoras_model extends CI_Model{
         $this->db->query("update operadoras set rut='".$rut."',nombre='".$nombre."',apepat='".$apepat."',apemat='".$apemat."',direccion='".$direccion."',celular='".$celular."',username='".$username."',password='".$password."', estado='".$estado."' where operadora_id='".$operadora_id."'");
         $this->db->close();
     }
+    public function buscar_operadoras($buscar){
+        $this->db->like('operadora_id',$buscar);
+        $this->db->or_like('rut',$buscar);
+        $this->db->or_like('nombre',$buscar);
+        $this->db->or_like('apepat',$buscar);
+        $this->db->or_like('apemat',$buscar);
+        $this->db->or_like('direccion',$buscar);
+        $this->db->or_like('celular',$buscar);
+        $this->db->or_like('username',$buscar);
+        $this->db->or_like('password',$buscar);
+        $query=  $this->db->get('operadoras');
+        $this->db->close();
+        return $query->result();
+    }
 }
 

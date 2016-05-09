@@ -12,7 +12,7 @@ class Carreras_model extends CI_Model{
         return $result;
     }
     public function save($pasajero, $direccion, $observacion, $movil_id, $operadora_id, $clientes_id ) {
-        $this->db->query("insert into Carreras (pasajero, direccion, horainicio, estado, observacion, movil_id, operadora_id, clientes_id) values ('".$pasajero."','".$direccion."',now(),1,'".$observacion."','".$movil_id."','".$operadora_id."','".$clientes_id."')");//guarda automaticamente estado 1
+        $this->db->query("insert into Carreras (pasajero, direccion, horainicio, horatermino, estado, observacion, movil_id, operadora_id, clientes_id) values ('".$pasajero."','".$direccion."',now(), null,1,'".$observacion."','".$movil_id."','".$operadora_id."','".$clientes_id."')");//guarda automaticamente estado 1
         $this->db->close();
     }
     public function find_by_id($carrera_id){
@@ -31,6 +31,21 @@ class Carreras_model extends CI_Model{
         $result = $query->result_object();
         $this->db->close();
         return $result;
+    }
+    public function buscar_carreras($buscar){
+        $this->db->like('carrera_id',$buscar);
+        $this->db->or_like('pasajero',$buscar);
+        $this->db->or_like('direccion',$buscar);
+        $this->db->or_like('horainicio',$buscar);
+        $this->db->or_like('horatermino',$buscar);
+        $this->db->or_like('valor',$buscar);
+        $this->db->or_like('observacion',$buscar);
+        $this->db->or_like('movil_id',$buscar);
+        $this->db->or_like('operadora_id',$buscar);
+        $this->db->or_like('clientes_id',$buscar);
+        $query=  $this->db->get('carreras');
+        $this->db->close();
+        return $query->result();
     }
 }
 

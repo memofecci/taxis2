@@ -8,35 +8,40 @@
 <form method="post" action="save">
     
         <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese Nombre ">
+            <label for="pasajero">Pasajero</label>
+            <input type="text" class="form-control" name="pasajero" id="pasajero" placeholder="Ingrese Nombre Pasajero">
         </div>
     <div class="form-group">
-            <label for="apepat">Apellido Paterno</label>
-            <input type="text" class="form-control" name="apepat" id="apepat" placeholder="Ingrese Apellido Paterno">
+            <label for="direccion">Direccion</label>
+            <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Ingrese Direccion de Retiro Pasajero">
         </div>
     <div class="form-group">
-            <label for="apemat">Apellido Materno</label>
-            <input type="text" class="form-control" name="apemat" id="apemat" placeholder="Ingrese Apellido Materno">
-        </div>
-    <div class="form-group">
-            <label for="ussername">Usuario</label>
-            <input type="text" class="form-control" name="username" id="username" placeholder="Ingrese Nombre Usuario">
-        </div>
-    <div class="form-group">
-            <label for="ussername">Usuario</label>
-            <input type="text" class="form-control" name="username" id="username" placeholder="Ingrese Nombre Usuario">
-        </div>
-    <div class="form-group">
-            <label for="password">Clave</label>
-            <input type="password" class="form-control" name="password" id="password" placeholder="Ingrese Clave Usuario">
+            <label for="observacion">Observacion</label>
+            <input type="text" class="form-control" name="observacion" id="observacion" placeholder="Ingrese Observacion">
         </div>
        <div>
             Movil<select class="form-control input-lg" name="movil_id">
-                    <option value="Administrador">Administrador</option>
-                    <option value="Operadora">Operadora</option>
+                <?php foreach ($Moviles as $data) { ?>
+                    <option value=<?php echo $data->movil_id ?>><?php echo $data->numero; ?></option>
+
+                <?php } ?>
+            </select>
+        </div>
+    <div>
+            Operadora<select class="form-control input-lg" name="operadora_id">
+                <?php foreach ($Operadoras as $data) { ?>
+                    <option value=<?php echo $data->operadora_id ?>><?php echo $data->nombre; ?></option>
+
+                <?php } ?>
+            </select>
+        </div>
+    <div>
+            Cliente<select class="form-control input-lg" name="clientes_id">
+                <?php foreach ($Clientes as $data) { ?>
+                    <option value=<?php echo $data->clientes_id ?>><?php echo $data->nombre; ?></option>
+
+                <?php } ?>
             </select>
         </div>
         <button type="submit" class="btn btn-default">Guardar</button>
     </form>
-

@@ -1,10 +1,11 @@
-<h1>Listado de Carreras</h1><br><h4> Usuario:<?php echo $username ?> ID:<?php echo $idusuario ?></h4><br>
+<h1>Listado de Carreras</h1><br></h4><br>
 
 <div id="navbar" class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
 
         <li><a href=<?php echo (base_url(). 'index.php/Carreras/nuevo')?>>Nuevo Careras</a></li>
         <li><a href=<?php echo (base_url(). 'index.php/Carreras/history')?>>Historial</a></li>
+        <li><a href=<?php echo (base_url(). 'index.php/Carreras/buscar')?>>Buscar</a></li>
     </ul>
 </div>
 

@@ -4,7 +4,9 @@
     <ul class="nav navbar-nav">
 
         <li><a href=<?php echo (base_url(). 'index.php/choferes/nuevo')?>>Nuevo Chofer</a></li>
+        <li><a href=<?php echo (base_url(). 'index.php/choferes/buscar')?>>Buscar</a></li>
     </ul>
+    
 </div>
 
 <table class="table table-striped">
@@ -18,7 +20,7 @@
         <th>Opciones</th>
     </head>
     <tbody>
-        <?php foreach ($choferes as $data){?>
+        <?php foreach ($Choferes as $data){?>
                 
         <tr>     
             <td><?php echo $data->chofer_id; ?></td>
@@ -31,3 +33,4 @@
     </tbody>
      
 </table>
+

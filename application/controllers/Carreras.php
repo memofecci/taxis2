@@ -20,8 +20,6 @@ class Carreras extends CI_Controller {
 
     public function index() {
         $this->load->view('template/head_index');
-        $data['username']=  $this->session->userdata('nombre');
-        $data['idusuario']=  $this->session->userdata('id');
         $data["Carreras"] = $this->Carreras_model->list_all();
         $this->load->view('Carreras_index', $data);
         $this->load->view('template/footer_index');
@@ -77,6 +75,17 @@ class Carreras extends CI_Controller {
         $data["Clientes"]=  $this->Clientes_model->list_all();
         $data["Carreras"] = $this->Carreras_model->history();
         $this->load->view('Carreras_history', $data);
+        $this->load->view('template/footer_index');
+    }
+    public function buscar() {
+        $this->load->view('template/head_index');
+        if ($_POST) {
+            $buscar = $this->input->post('buscar');
+        } else {
+            $buscar = '';
+        }
+        $data["Carreras"] = $this->Carreras_model->buscar_carreras($buscar);
+        $this->load->view('Carreras_buscar', $data);
         $this->load->view('template/footer_index');
     }
 

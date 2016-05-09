@@ -43,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Radio Taxis Patagonia</a>
+          <a class="navbar-brand" href="<?php echo (base_url() . 'index.php/home') ?>">Radio Taxis Patagonia</a>
           <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/choferes') ?>">Choferes</a>
           <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/Moviles') ?>">Moviles</a>
           <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/Clientes') ?>">Clientes</a>

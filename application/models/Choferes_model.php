@@ -29,5 +29,15 @@ class Choferes_model extends CI_Model {
         //$this->db->query("update choferes set rut='".$rut."',nombre='".$nombre."',apepat='" . $apepat . "', apemat='" . $apemat . "', direccion='" . $direccion . "',celular='" . $celular . "',estado='".$estado."' where chofer_id='".$chofer_id."'");
         $this->db->close();
     }
+    public function buscar_choferes($buscar){
+        $this->db->like('chofer_id',$buscar);
+        $this->db->or_like('rut',$buscar);
+        $this->db->or_like('nombre',$buscar);
+        $this->db->or_like('apepat',$buscar);
+        $this->db->or_like('apemat',$buscar);
+        $query=  $this->db->get('choferes');
+        $this->db->close();
+        return $query->result();
+    }
 
 }

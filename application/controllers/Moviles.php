@@ -57,5 +57,16 @@ class Moviles extends CI_Controller{
         $this->Moviles_model->edit($movil_id,$numero,$patente, $chofer_id, $estado);
         redirect('Moviles');
     }
+    public function buscar() {
+        $this->load->view('template/head_index');
+        if ($_POST) {
+            $buscar = $this->input->post('buscar');
+        } else {
+            $buscar = '';
+        }
+        $data["Moviles"] = $this->Moviles_model->buscar_moviles($buscar);
+        $this->load->view('Moviles_buscar', $data);
+        $this->load->view('template/footer_index');
+    }
 }
 

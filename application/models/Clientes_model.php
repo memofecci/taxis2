@@ -26,4 +26,13 @@ class Clientes_model extends CI_Model{
         $this->db->query("update Clientes set nombre='".$nombre."', direccion='".$direccion."', telefono='".$telefono."', estado='".$estado."' where clientes_id='".$clientes_id."'");
         $this->db->close();
     }
+    public function buscar_clientes($buscar){
+        $this->db->like('clientes_id',$buscar);
+        $this->db->or_like('nombre',$buscar);
+        $this->db->or_like('direccion',$buscar);
+        $this->db->or_like('telefono',$buscar);
+        $query=  $this->db->get('clientes');
+        $this->db->close();
+        return $query->result();
+    }
 }
