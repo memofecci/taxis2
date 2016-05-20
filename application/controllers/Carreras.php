@@ -14,7 +14,7 @@ class Carreras extends CI_Controller {
         if ($this->session->userdata('login')) {
             
         } else {
-            redirect(base_url() . "index.php/login");
+            redirect(base_url() . "index.php/logins");
         }
     }
 
@@ -88,5 +88,6 @@ class Carreras extends CI_Controller {
         $this->load->view('Carreras_buscar', $data);
         $this->load->view('template/footer_index');
     }
+    
 
 }

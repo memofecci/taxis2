@@ -3,7 +3,7 @@
 <div id="navbar" class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
 
-        <li><a href=<?php echo (base_url(). 'index.php/operadora')?>>Menu Operadora</a></li>
+        <li><a href=<?php echo (base_url(). 'index.php/operadoras')?>>Menu Operadora</a></li>
     </ul>
 </div>
 <form method="post" action="">
@@ -11,7 +11,7 @@
         <label for="buscar">Buscar</label>
         <input type="text" class="form-control" name="buscar" id="buscar" placeholder="Ingrese Palabra a Buscar">
     </div>
-    <button type="submit" class="btn btn-default">Buscar</button>
+    <button type="submit" class="btn btn-info">Buscar</button>
 
     <table class="table table-striped">
 

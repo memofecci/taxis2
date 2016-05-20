@@ -3,6 +3,7 @@
 <div id="navbar" class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
 
+        <li><a href=<?php echo (base_url(). 'index.php/home')?>>Home</a></li>
         <li><a href=<?php echo (base_url(). 'index.php/Carreras/nuevo')?>>Nuevo Careras</a></li>
         <li><a href=<?php echo (base_url(). 'index.php/Carreras/history')?>>Historial</a></li>
         <li><a href=<?php echo (base_url(). 'index.php/Carreras/buscar')?>>Buscar</a></li>

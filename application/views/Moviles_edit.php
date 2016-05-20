@@ -41,6 +41,6 @@
 
             </select>
         </div>
-        <button type="submit" class="btn btn-default">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
         <?php } ?>
     </form>

@@ -20,5 +20,5 @@
             <label for="telefono">Telefono</label>
             <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Ingrese Telefono">
         </div>
-        <button type="submit" class="btn btn-default">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
     </form>

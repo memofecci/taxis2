@@ -39,5 +39,5 @@
             <label for="password">Clave</label>
             <input type="password" class="form-control" name="password" id="password" placeholder="Ingrese Clave">
         </div>
-        <button type="submit" class="btn btn-default">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
     </form>

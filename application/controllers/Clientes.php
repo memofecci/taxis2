@@ -10,7 +10,7 @@ class Clientes extends CI_Controller {
         if ($this->session->userdata('login')) {
             
         } else {
-            redirect(base_url() . "index.php/login");
+            redirect(base_url() . "index.php/logins");
         }
     }
 
@@ -70,6 +70,12 @@ class Clientes extends CI_Controller {
         }
         $data["Clientes"] = $this->Clientes_model->buscar_clientes($buscar);
         $this->load->view('Clientes_buscar', $data);
+        $this->load->view('template/footer_index');
+    }
+    public function History() {
+        $this->load->view('template/head_index');
+        $data["Clientes"] = $this->Clientes_model->history();
+        $this->load->view('Clientes_history', $data);
         $this->load->view('template/footer_index');
     }
 

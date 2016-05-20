@@ -10,7 +10,7 @@ class Choferes extends CI_Controller {
         if ($this->session->userdata('login')) {
             
         } else {
-            redirect(base_url() . "index.php/login");
+            redirect(base_url() . "index.php/logins");
         }
     }
 
@@ -74,6 +74,12 @@ class Choferes extends CI_Controller {
         }     
         $data["choferes"] = $this->Choferes_model->buscar_choferes($buscar);
             $this->load->view('Choferes_buscar', $data);
+        $this->load->view('template/footer_index');
+    }
+    public function History() {
+        $this->load->view('template/head_index');
+        $data["Choferes"] = $this->Choferes_model->history();
+        $this->load->view('Choferes_history', $data);
         $this->load->view('template/footer_index');
     }
 

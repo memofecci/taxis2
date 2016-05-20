@@ -10,7 +10,7 @@ class Moviles extends CI_Controller{
         if ($this->session->userdata('login')) {
             
         } else {
-            redirect(base_url() . "index.php/login");
+            redirect(base_url() . "index.php/logins");
         }
         
     }
@@ -30,8 +30,9 @@ class Moviles extends CI_Controller{
         $this->load->view('template/head_index');
         $numero = $this->input->post('numero');
         $patente = $this->input->post('patente');
+        $patente1 = strtoupper($patente);
         $chofer_id = $this->input->post('chofer_id');
-        $this->Moviles_model->save($numero, $patente, $chofer_id);
+        $this->Moviles_model->save($numero, $patente1, $chofer_id);
         redirect('moviles');
         $this->load->view('template/footer_index');
     }
@@ -52,9 +53,10 @@ class Moviles extends CI_Controller{
         $movil_id=  $this->input->post('movil_id');
         $numero = $this->input->post('numero');
         $patente = $this->input->post('patente');
+        $patente1 = strtoupper($patente);
         $chofer_id = $this->input->post('chofer_id');
         $estado=  $this->input->post('estado');
-        $this->Moviles_model->edit($movil_id,$numero,$patente, $chofer_id, $estado);
+        $this->Moviles_model->edit($movil_id,$numero,$patente1, $chofer_id, $estado);
         redirect('Moviles');
     }
     public function buscar() {
@@ -66,6 +68,12 @@ class Moviles extends CI_Controller{
         }
         $data["Moviles"] = $this->Moviles_model->buscar_moviles($buscar);
         $this->load->view('Moviles_buscar', $data);
+        $this->load->view('template/footer_index');
+    }
+    public function History() {
+        $this->load->view('template/head_index');
+        $data["Moviles"] = $this->Moviles_model->history();
+        $this->load->view('Moviles_history', $data);
         $this->load->view('template/footer_index');
     }
 }

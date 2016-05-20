@@ -9,7 +9,7 @@ class Operadoras extends CI_Controller{
         if ($this->session->userdata('login')) {
             
         } else {
-            redirect(base_url() . "index.php/login");
+            redirect(base_url() . "index.php/logins");
         }
     }
     public function index() {
@@ -61,8 +61,9 @@ class Operadoras extends CI_Controller{
         $celular = $this->input->post('celular');
         $username = $this->input->post('username');
         $password = $this->input->post('passsword');
+        $salida= password_hash($password, PASSWORD_DEFAULT);
         $estado=  $this->input->post('estado');
-        $this->Operadoras_model->edit($operadora_id, $rut, $nombre, $apepat, $apemat, $direccion, $celular,$username, $password, $estado);
+        $this->Operadoras_model->edit($operadora_id, $rut, $nombre, $apepat, $apemat, $direccion, $celular,$username, $salida, $estado);
         redirect('Operadoras');
     }
     public function buscar() {
@@ -74,6 +75,12 @@ class Operadoras extends CI_Controller{
         }
         $data["Operadoras"] = $this->Operadoras_model->buscar_operadoras($buscar);
         $this->load->view('Operadoras_buscar', $data);
+        $this->load->view('template/footer_index');
+    }
+    public function History() {
+        $this->load->view('template/head_index');
+        $data["Operadoras"] = $this->Operadoras_model->history();
+        $this->load->view('Operadoras_history', $data);
         $this->load->view('template/footer_index');
     }
     

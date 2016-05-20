@@ -39,5 +39,11 @@ class Choferes_model extends CI_Model {
         $this->db->close();
         return $query->result();
     }
+    public function history() {
+        $query = $this->db->query("select * from choferes where estado=0");
+        $result = $query->result_object();
+        $this->db->close();
+        return $result;
+    }
 
 }

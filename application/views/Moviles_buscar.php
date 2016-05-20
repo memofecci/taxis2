@@ -11,7 +11,7 @@
         <label for="buscar">Buscar</label>
         <input type="text" class="form-control" name="buscar" id="buscar" placeholder="Ingrese Palabra a Buscar">
     </div>
-    <button type="submit" class="btn btn-default">Buscar</button>
+    <button type="submit" class="btn btn-info">Buscar</button>
 
     <table class="table table-striped">
 

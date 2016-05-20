@@ -18,10 +18,10 @@
        <div>
             Chofer:<select class="form-control input-lg" name="chofer_id">
                 <?php foreach ($Choferes as $data) { ?>
-                    <option value=<?php echo $data->chofer_id ?>><?php echo $data->nombre; ?></option>
+                    <option value=<?php echo $data->chofer_id ?>><?php echo $data->nombre; ?>/<?php echo $data->apepat; ?></option>
 
                 <?php } ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-default">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
     </form>

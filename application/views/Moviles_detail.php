@@ -14,7 +14,6 @@
         <th>Numero Movil</th>
         <th>Patente</th>
         <th>Chofer</th>
-        <th>Estado</th>
     </head>
     <tbody>
         <?php foreach ($Moviles as $data){?>
@@ -23,8 +22,7 @@
             <td><?php echo $data->movil_id; ?></td>
             <td><?php echo $data->numero; ?></td>
             <td><?php echo $data->patente; ?></td>
-            <td><?php echo $data->chofer_id; ?></td>
-            <td><?php echo $data->estado; ?></td>
+            <td><?php echo $data->nombre; ?></td>
         <?php } ?> 
     </tbody>
      

@@ -21,8 +21,8 @@ class Operadoras_model extends CI_Model{
         $this->db->close();
         return $result;
     }
-    public function edit($operadora_id,$rut, $nombre, $apepat, $apemat, $direccion, $celular,$username, $password,$estado){
-        $this->db->query("update operadoras set rut='".$rut."',nombre='".$nombre."',apepat='".$apepat."',apemat='".$apemat."',direccion='".$direccion."',celular='".$celular."',username='".$username."',password='".$password."', estado='".$estado."' where operadora_id='".$operadora_id."'");
+    public function edit($operadora_id,$rut, $nombre, $apepat, $apemat, $direccion, $celular,$username, $salida,$estado){
+        $this->db->query("update operadoras set rut='".$rut."',nombre='".$nombre."',apepat='".$apepat."',apemat='".$apemat."',direccion='".$direccion."',celular='".$celular."',username='".$username."',password='".$salida."', estado='".$estado."' where operadora_id='".$operadora_id."'");
         $this->db->close();
     }
     public function buscar_operadoras($buscar){
@@ -38,6 +38,12 @@ class Operadoras_model extends CI_Model{
         $query=  $this->db->get('operadoras');
         $this->db->close();
         return $query->result();
+    }
+    public function history() {
+        $query = $this->db->query("select * from operadoras where estado=0");
+        $result = $query->result_object();
+        $this->db->close();
+        return $result;
     }
 }
 

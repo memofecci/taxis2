@@ -24,6 +24,6 @@
             <label for="observacion">Observacion</label>
             <input type="text" class="form-control" name="observacion" id="observacion" value=<?php echo $data->observacion; ?>>
         </div>
-        <button type="submit" class="btn btn-default">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
         <?php } ?>
     </form>

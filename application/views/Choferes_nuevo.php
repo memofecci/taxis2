@@ -31,5 +31,5 @@
             <label for="celular">Celular</label>
             <input type="text" class="form-control" name="celular" id="celular" placeholder="Ingrese Celular">
         </div>
-        <button type="submit" class="btn btn-default">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
     </form>

@@ -1,5 +1,12 @@
 <div id="navbar" class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
+        <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/choferes') ?>">Choferes</a>
+          <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/Moviles') ?>">Moviles</a>
+          <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/Clientes') ?>">Clientes</a>
+          <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/Operadoras') ?>">Operadoras</a>
+          <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/Carreras') ?>">Carreras</a>
+          <br>
+          <a  class="navbar-brand" href="<?php echo (base_url() . 'index.php/logins/log_out') ?>">Cerrar Sesion</a>
         <li><a href=<?php echo (base_url(). 'index.php/carreras')?>>Menu Carreras</a></li>
     </ul>
 </div><!--/.nav-collapse -->
@@ -36,6 +43,15 @@
             </select>
         </div>
     <div>
+            Clientes<select class="form-control input-lg" name="clientes">
+                <?php foreach ($Clientes as $data) { ?>
+                    <option value=otro>otro</option>
+                    <option value=<?php echo $data->clientes_id ?>><?php echo $data->nombre; ?></option>
+<?php } ?>
+            </select>
+        </div>
+    <!--
+    <div>
             Cliente<select class="form-control input-lg" name="clientes_id">
                 <?php foreach ($Clientes as $data) { ?>
                     <option value=<?php echo $data->clientes_id ?>><?php echo $data->nombre; ?></option>
@@ -43,5 +59,5 @@
                 <?php } ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-default">Guardar</button>
+-->        <button type="submit" class="btn btn-primary">Guardar</button>
     </form>
