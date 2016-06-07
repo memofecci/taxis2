@@ -45,5 +45,11 @@ class Choferes_model extends CI_Model {
         $this->db->close();
         return $result;
     }
+    public function getChoferes(){
+        
+        $query=  $this->db->get('choferes');
+        $this->db->close();
+        return $query->result();
+    }
 
 }

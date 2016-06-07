@@ -6,6 +6,7 @@
         <li><a href=<?php echo (base_url() . 'index.php/choferes/nuevo') ?>>Nuevo Chofer</a></li>
         <li><a href=<?php echo (base_url() . 'index.php/choferes/buscar') ?>>Buscar</a></li>
         <li><a href=<?php echo (base_url() . 'index.php/choferes/history') ?>>Historial</a></li>
+        <li><a href=<?php echo (base_url() . 'index.php/choferes/indexPDF') ?>>PDF</a></li>
     </ul>
 
 </div>
