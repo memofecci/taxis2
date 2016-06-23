@@ -93,7 +93,7 @@ class Choferes extends CI_Controller {
     public function indexPDF() 
     {
         $this->createFolder();
-        $this->html2pdf->folde('./files/pdfs/');
+        $this->html2pdf->folder('./files/pdfs/');
         $this->html2pdf->filename('conductores.pdf');
         $this->html2pdf->paper('a4', 'portrait');
         $data = array(
